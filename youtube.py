@@ -1,7 +1,13 @@
 import webbrowser, sys
 
-option = sys.argv[1]
-query = sys.argv[2]
+try:
+    option = sys.argv[1]
+    query = sys.argv[2]
+except IndexError:
+    print("Usage: youtube search <search term> | youtube id <video id>")
+    print("Example: youtube search holo+no+graffiti | youtube id PJf3XZ636-0")
+    print("If a search term contains spaces, insert '+' where a space would be.")
+    exit()
 
 if option == "search":
     if sys.argv[3] != None:
