@@ -19,12 +19,15 @@ if option == "search":
     except:
         pass
 elif option == "id":
-    if sys.argv[3] != None or sys.argv[3] != "":
-        print("A video ID should not contain spaces.")
-        print("Please retype or repaste the video ID.")
-        print("Remember, the video ID is the random assortment of letters and numbers at the end of the URL.")
-    else:
-        webbrowser.open("https://www.youtube.com/results?search_query=" + query)
+    try:
+        if sys.argv[3] != None or sys.argv[3] != "":
+            print("A video ID should not contain spaces.")
+            print("Please retype or repaste the video ID.")
+            print("Remember, the video ID is the random assortment of letters and numbers at the end of the URL.")
+        else:
+            webbrowser.open("https://www.youtube.com/results?search_query=" + query)
+    except:
+        pass
 else:
     print("Usage: youtube search <search term> | youtube id <video id>")
     print("Example: youtube search holo+no+graffiti | youtube id PJf3XZ636-0")
