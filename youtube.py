@@ -10,11 +10,14 @@ except IndexError:
     exit()
 
 if option == "search":
-    if sys.argv[3] != None:
-        print("This search function contains spaces.")
-        print("Please insert a '+' where the spaces should be.")
-    else:
-        webbrowser.open("https://www.youtube.com/results?search_query=" + query)
+    try:
+        if sys.argv[3] != None:
+            print("This search function contains spaces.")
+            print("Please insert a '+' where the spaces should be.")
+        else:
+            webbrowser.open("https://www.youtube.com/results?search_query=" + query)
+    except:
+        pass
 elif option == "id":
     if sys.argv[3] != None or sys.argv[3] != "":
         print("A video ID should not contain spaces.")
