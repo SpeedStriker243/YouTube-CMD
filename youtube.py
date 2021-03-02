@@ -25,7 +25,7 @@ elif option == "id":
             print("Please retype or repaste the video ID.")
             print("Remember, the video ID is the random assortment of letters and numbers at the end of the URL.")
         else:
-            webbrowser.open("https://www.youtube.com/results?search_query=" + query)
+            webbrowser.open("https://www.youtube.com/watch?v=" + query)
     except:
         pass
 else:
